@@ -1,0 +1,159 @@
+/* css reset */
+*{box-sizing: border-box;}
+*::before , *::after{box-sizing: border-box;} /* 伪元素的box-sizing也设置成border-box */
+*{padding: 0; margin: 0;}
+ul,ol{list-style: none;}
+a{color: inherit; text-decoration: none;}
+img{max-width: 100%;max-height: 100%;}
+
+/*iconfont*/
+.icon {
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+body{
+    background: #eee;
+}
+
+.globleHeader{
+    margin: 20px;
+}
+.searchForm{
+    display: flex;
+    justify-content:space-between;
+}
+.searchForm > input{
+    width: 100%;
+    padding: 0 10px;
+    margin-right: 10px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+.searchForm > button{
+     white-space: nowrap;/*让按钮不要换行*/
+     padding: 0 28px;
+     border-radius: 4px;
+     border: none;
+     background: #0282B9; /*按钮背景颜色*/
+     color: white; /*字体颜色*/
+     font-size: 16px;
+}
+
+
+.siteList{
+    margin: 20px;
+    /*flex布局*/
+    display: flex;
+    flex-wrap: wrap; /*自动换行*/
+    justify-content: space-between;
+}
+
+.siteList .site{
+    border: 1px solid #DDD;
+    width: 160px;
+    background: white;
+    border-radius: 4px;
+    padding: 20px 0;
+    /*flex布局*/
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column; /*垂直居中*/
+    /* 新增 */
+    position: relative;
+    cursor: pointer;
+}
+.siteList .site > .logo{
+    width: 64px;
+    height: 64px;
+    font-size: 64px;
+    /*flex布局让logo居中*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 新增 */
+    text-transform: uppercase;
+}
+.siteList .site > .link{
+    font-size: 14px;
+    margin-top: 4px;
+}
+.siteList .addButton{
+    width: 160px;
+    background: white;
+    /* height: 128px; */
+    border: 1px solid #ddd;
+    padding: 20px 0;
+    /*flex布局*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*垂直方向居中*/
+    flex-direction: column;
+}
+.siteList .addButton .icon{
+    width: 56px;
+    height: 56px;
+}
+.siteList .addButton .icon-wrapper{
+    width: 64px;
+    height: 64px;
+    /*flex布局*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.siteList .addButton .text{
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* 新增 */
+.siteList .site > .close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  display: none;
+  cursor: default;
+}
+.siteList .site:hover > .close {
+  display: block;
+}
+.globleMain{
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.siteList > li{
+  margin-bottom: 10px;
+}
+@media (min-width: 500px) {
+  .globalHeader {
+    margin: 60px 0 100px;
+  }
+}
+@media (min-width: 500px) {
+  .searchForm {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 500px){
+  .siteList{
+    margin-left: 0;
+    margin-right: -25px;
+    justify-content: flex-start;
+  }
+}
+@media(min-width: 500px){
+  .siteList > li {
+    margin-right: 25px;
+  }
+}
+
+/*# sourceMappingURL=style.2531fa08.css.map */
